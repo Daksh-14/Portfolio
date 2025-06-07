@@ -1,6 +1,7 @@
 import { FaJava } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 import { FaDocker } from "react-icons/fa";
+import { FaPython } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { BiLogoSpringBoot, BiLogoPostgresql } from "react-icons/bi";
 import { DiRedis } from "react-icons/di";
@@ -19,6 +20,7 @@ const TechStack = () => {
         { name: "Redis", icon: <DiRedis />, color: "#D82C20" },
         { name: "Solidity", icon: <SiSolidity />, color: "#3C3C3D" },
         { name: "C++", icon: <TbBrandCpp />, color: "#00599C" },
+        { name: "Python", icon: <FaPython />, color: "#3776AB" },
     ];
 
 

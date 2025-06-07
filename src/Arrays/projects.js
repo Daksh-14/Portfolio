@@ -1,38 +1,75 @@
 export const projects = [
   {
-    name: "Real Estate Tokenization",
-    description: "Tokenized real estate with smart contracts and liquidity pool integration for fractional ownership and secondary trading.",
-    detail:"Developed a decentralized application that allows users to invest in real estate properties through tokenization. Each property is represented as a unique token, enabling fractional ownership and liquidity through a decentralized exchange. The platform includes features for property listing, investment tracking, and secure transactions using smart contracts.",
-    techStack: ["Solidity", "React", "Node.js", "Express", "PostgreSQL"],
+    name: "CodeCollab",
+    description: "A real-time collaborative coding platform with support for multiple files, language execution inside Docker containers, and VS Code-like UX.",
+    detail: `This is a full-stack real-time collaborative code editor inspired by tools like Replit and VS Code. The platform allows multiple users to collaboratively edit code with real-time synchronization and multi-file support. The frontend, built with React and Monaco Editor, provides a familiar development experience, complete with a navigable file tree powered by react-arborist. Users can create, delete files and folders, and select a main file for execution. All code updates are instantly shared using WebSockets, giving the feel of seamless live collaboration.
+
+    The backend, developed in Spring Boot, provides WebSocket-based synchronization and REST APIs for session and file management. Redis is integrated both as a Pub/Sub system for broadcasting real-time updates across server instances, and as a cache layer to store active session states and file data for faster access and reduced database load. All code is executed securely inside Docker containers with support for Java, Python, and C++, maintaining sandboxed environments for each run. This architecture ensures real-time performance, horizontal scalability, and safe multi-user collaboration.`,
+    techStack: ["React", "Spring Boot", "Redis", "Docker", "PostgreSQL","Tailwind CSS"],
     links: {
-      github: "https://github.com/",
+      github: "https://github.com/Daksh-14/CollabCode",
+      demo: "https://collabcode-frontend.onrender.com/",
+    },
+  },
+  {
+    name: "RealTokenize",
+    description: "A blockchain-based platform to tokenize real estate assets into ERC-20 tokens, allowing fractional ownership and seamless trading via a custom liquidity pool.",
+    detail: `This project enables the tokenization of real estate assets by representing property ownership through ERC-20 tokens on the Ethereum blockchain. Each property is registered through a RealEstateTokenFactory smart contract, which creates new tokens for individual assets. These tokens represent fractional ownership and can be freely transferred or sold.
+
+A custom RealEstateLiquidityPool contract allows users to list their tokens for sale and enables Special Purpose Vehicles (SPVs) to fulfill those requests — offering a decentralized yet controlled exchange system. Only SPVs have the rights to set property-specific data like token price, rental yield, or updates.
+
+The backend, built with Express.js and MongoDB, handles user interactions with smart contracts, manages metadata, and provides endpoints to create, view, and manage properties. On the frontend, the React application offers users a seamless experience to create, view, and trade property tokens, with real-time blockchain interaction via Ethers.js.
+
+The platform ensures transparency, security, and global accessibility in real estate investment, while supporting role-based access control, SPV-only operations, and modular smart contract interaction patterns.
+
+
+`,
+    techStack: ["React", "Solidity", "Node.js", "Ether.js", "MongoDB", "Tailwind CSS"],
+    links: {
+      github: "https://github.com/Daksh-14/RealEstateTokenization",
       demo: "",
     },
   },
   {
-    name: "Collaborative Code Editor",
-    description: "VSCode-like real-time editor with Monaco, file tree, Redis-backed WebSockets and secure Docker-based code execution.",
-    detail:`The standard Lorem Ipsum passage, used since the 1500s
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    name: "TaskTracker",
+    description: "A timezone-aware task assignment and tracking platform designed to enhance collaboration in distributed teams, it features intuitive dashboards, calendar-based task views, and visual status breakdowns.",
+    detail: `This full-stack Task Tracker was developed to support productivity in distributed teams working across time zones. It allows managers to assign tasks, set deadlines, and monitor progress, while team members can view and update their responsibilities through a clean and responsive interface.
 
-Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
-"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+The platform features a calendar view, enabling users to visualize upcoming tasks by date, along with a dashboard that displays task distribution and progress using pie charts and tabular summaries. These visual cues help teams stay aligned without constant back-and-forth.
 
-1914 translation by H. Rackham
-"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
-
-Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
-"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
-
-1914 translation by H. Rackham
-"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."`,
-    // detail:"Built a collaborative code editor that allows multiple users to edit code in real-time, similar to VSCode. The application features a file tree for easy navigation, uses Redis for WebSocket communication, and securely executes code in isolated Docker containers. It supports syntax highlighting, code completion, and version control for collaborative coding sessions.",
-    techStack: ["React", "Spring Boot", "Redis", "Docker", "PostgreSQL"],
+Built with React on the frontend and Node.js with PostgreSQL on the backend, the application handles timezone normalization for accurate scheduling, and role-based access to distinguish between managers and contributors. It's particularly effective for teams working remotely, where clear visibility and lightweight planning tools are essential.`,
+    techStack: ["React", "Node.js", "PostgreSQL", "Tailwind CSS"],
     links: {
-      github: "https://github.com/",
+      github: "https://github.com/Daksh-14/TaskTracker",
+      demo: "https://tasktracker-frontend-fkuz.onrender.com/",
+    },
+  },
+  {
+    name: "SecureCloud Drive",
+    description: "A decentralized and secure cloud storage system using IPFS and blockchain, allowing users to upload files via wallet authentication, manage access permissions, and retain full ownership of their data.",
+    detail: `This decentralized cloud storage system enables users to securely upload, access, and manage files using blockchain and IPFS. Built for privacy and ownership, the application uses wallet-based authentication (e.g., MetaMask) to map users to their uploaded files. Files are stored on Pinata’s IPFS gateway, where each upload returns a unique content-addressed hash. These hashes are then stored on-chain, associated with the uploader’s wallet address, ensuring data immutability and ownership.
+
+The system supports granular access control, allowing users to grant or revoke access to specific wallet addresses for any file. This permission layer is enforced on the blockchain, providing transparent and tamper-proof authorization. The combination of smart contracts and IPFS ensures that users retain full control over their data without relying on centralized cloud providers.
+
+`,
+    techStack: ["React", "Solidity", "Pinata (IPFS)", "Ether.js", "Tailwind CSS"],
+    links: {
+      github: "https://github.com/Daksh-14/SecureCloud-Drive",
       demo: "",
     },
   },
-  // add more projects here
+  {
+    name: "NutriPlan",
+    description: "A personalized nutrition and meal planning platform with an integrated AI chatbot, built using React, Spring Boot, and PostgreSQL. It helps users generate tailored diet plans, track macronutrients, and get instant dietary guidance.",
+    detail: `NutriPlan is a tech-driven platform designed to make healthy living effortless. It features a React-based frontend with an interactive Weekly Meal Planner, NutriScan (food image recognition), and a curated library of nutrition blogs.
+Its AI-powered chatbot, built using OpenAI’s models and LangChain, provides real-time, personalized dietary guidance, answering food-related queries and adjusting recommendations based on user behavior.
+The hybrid backend combines Node.js and Express for REST API requests with Flask-based microservices handling image classification and machine learning inference. PostgreSQL securely manages user data, plans, and food logs, while a scikit-learn pipeline tracks eating habits to refine dietary suggestions over time.
+By integrating web development, AI, and data science, NutriPlan delivers personalized, scalable healthtech solutions for smarter nutrition decisions.`,
+    techStack: ["React", "Node.js", "Flask", "PostgreSQL", "LangChain"],
+    links: {
+      github: "https://github.com/Daksh-14/hackiiitp",
+      demo: "https://nutriplan-ems7.onrender.com/",
+    },
+  },
 ];
 
