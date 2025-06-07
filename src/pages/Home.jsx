@@ -1,6 +1,6 @@
-import About from "../components/About";
-import Achievements from "../components/Achievements";
-import TechStack from "../components/TechStack";
+import About from "../components/About.jsx";
+import Achievements from "../components/Achievements.jsx";
+import TechStack from "../components/TechStack.jsx";
 
 const Home = () => {
     return (

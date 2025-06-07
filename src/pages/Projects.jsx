@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { projects } from "../Arrays/projects";
+import { projects } from "../Arrays/projects.js";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const Projects = () => {
@@ -25,8 +25,8 @@ const Projects = () => {
                 {projects[activeProject].name}
               </h3>
 
-              <div className="h-[50vh] overflow-y-scroll mb-6 scroll-smooth scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800">
-                <p className="text-gray-300 text-sm md:text-base leading-relaxed ">
+              <div className=" max-h-[50vh] overflow-y-auto mb-3 md:mb-6 scroll-smooth scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800">
+                <p className="text-gray-300 text-sm md:text-base leading-relaxed whitespace-pre-line">
                   {projects[activeProject].detail}
                 </p>
               </div>
@@ -39,7 +39,9 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2 rounded transition"
                   >
-                    GitHub
+                    <div className="flex items-center gap-1">
+                      <FaGithub />GitHub
+                    </div>
                   </a>
                 )}
                 {projects[activeProject].links.demo && (
@@ -49,7 +51,9 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-4 py-2 rounded transition"
                   >
-                    Live Demo
+                    <div className="flex items-center gap-1">
+                      <FaExternalLinkAlt />Live Demo
+                    </div>
                   </a>
                 )}
               </div>
@@ -68,7 +72,7 @@ const Projects = () => {
               >
                 <div className="md:w-2/3  ">
                   <h3 className="text-2xl font-semibold text-blue-400">{project.name}</h3>
-                  <p className="text-gray-300 mt-2">{project.description}</p>
+                  <p className="text-gray-300 mt-2 md:text-[17px]">{project.description}</p>
                   <div className="mt-4 flex gap-4">
                     {project.links.github && (
                       <a
@@ -77,7 +81,9 @@ const Projects = () => {
                         rel="noopener noreferrer"
                         className="text-sm text-blue-500 hover:underline"
                       >
-                        GitHub
+                        <div className="flex items-center gap-1 md:text-[16px]">
+                          <FaGithub />GitHub
+                        </div>
                       </a>
                     )}
                     {project.links.demo && (
@@ -87,7 +93,9 @@ const Projects = () => {
                         rel="noopener noreferrer"
                         className="text-sm text-green-500 hover:underline"
                       >
-                        Live Demo
+                        <div className="flex items-center gap-1 md:text-[16px]">
+                          <FaExternalLinkAlt />Live Demo
+                        </div>
                       </a>
                     )}
                   </div>
@@ -97,7 +105,7 @@ const Projects = () => {
                   {project.techStack.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 text-sm bg-gray-900 text-gray-100 rounded-full border border-gray-600"
+                      className="px-3 py-1 text-sm md:text-[16px] bg-gray-900 text-gray-100 rounded-full border border-gray-600"
                     >
                       {tech}
                     </span>
