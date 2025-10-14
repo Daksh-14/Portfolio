@@ -9,7 +9,7 @@ const Navbar = () => {
   const navItems = [
     { label: "Home", path: "/" },
     { label: "Projects", path: "/projects" },
-    { label: "Timeline", path: "/timeline" },
+    // { label: "Timeline", path: "/timeline" },
   ];
 
   const toggleMenu = () => setIsOpen(!isOpen);
